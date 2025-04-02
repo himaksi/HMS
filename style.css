@@ -1,0 +1,173 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Full Page Centering */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('hs.jpg') no-repeat center center/cover;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Heading - Hospital Management System */
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Centering the Form Box */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Glassmorphic Form Styling */
+.form-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input Fields & Dropdown */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* Placeholder text color */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Input & Select Focus Effect */
+input:focus, select:focus {
+    border-color: #00c3ff;
+    box-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+}
+
+/* Fix for Admin Option Visibility */
+select {
+    appearance: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff; /* Ensures text is visible */
+    font-weight: bold;
+}
+
+/* Ensuring options in dropdown are readable */
+select option {
+    background: #fff;
+    color: #000; /* Black text for better visibility */
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #007BFF, #00c3ff);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Button Hover & Click Effects */
+button:hover {
+    background: linear-gradient(90deg, #0056b3, #0080ff);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Forgot Password */
+.forgot-password {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #00c3ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Register Link */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #00c3ff;
+    transition: 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    input, select, button {
+        font-size: 16px; /* Slightly bigger for better touch interaction */
+        padding: 14px;
+    }
+}

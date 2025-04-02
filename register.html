@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Hospital Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        input, select, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: dodgerblue;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Register as a New Patient</h2>
+    <div class="container">
+        <form action="register.php" method="POST">
+            <input type="text" name="fullname" placeholder="Full Name" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
+            <input type="text" name="phone" placeholder="Phone Number" required><br>
+            <button type="button" onclick="sendOTP()">Send OTP</button>
+            <input type="text" name="otp" placeholder="Enter OTP" required><br>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br>
+            <input type="date" name="dob" required><br>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="FE.html" style="color: lightblue;">Login here</a></p>
+    </div>
+
+    <script>
+        function sendOTP() {
+            alert("OTP sent to your phone/email.");
+            // You can implement actual OTP sending via backend API
+        }
+    </script>
+</body>
+</html>

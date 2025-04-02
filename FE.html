@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Login</title>
+    <link rel="shortcut icon" href="aid.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Management System</h1>
+        <div class="form-container">
+            <select id="userType">
+                <option value="admin">Admin</option>
+                <option value="doctor">Doctor</option>
+                <option value="patient">Patient</option>
+                <option value="staff">Staff</option>
+            </select>
+            <input type="email" id="email" placeholder="Enter Email" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <h3><a href="forgot-password.html" class="forgot-password">Forgot Password?</a></h3>
+            <button onclick="login()">Login</button>
+            <h3>New User? <a href="register.html">Register Here</a></h3>
+        </div>
+    </div>
+    <script src="ok.js"></script>
+</body>
+</html>
